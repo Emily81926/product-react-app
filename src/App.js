@@ -1,3 +1,4 @@
+import "bulma/css/bulma.css";
 import { useState, useEffect } from "react";
 import getProducts from "./apis/getProducts";
 import ProductList from "./components/ProductList";
@@ -14,7 +15,11 @@ function App() {
     getData();
   }, []);
 
-  return <ProductList products={products} />;
+  return (
+    <div>
+      <ProductList products={products} />
+    </div>
+  );
 }
 
 export default App;

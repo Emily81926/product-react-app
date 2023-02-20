@@ -7,7 +7,13 @@ function ProductList({ products }) {
     return <ProductCard key={id} title={title} price={price} image={image} />;
   });
 
-  return <div>{renderProducts}</div>;
+  return (
+    <div className="container">
+      <section className="section">
+        <div className="columns is-multiline is-vcentered">{renderProducts}</div>
+      </section>
+    </div>
+  );
 }
 
 export default ProductList;
