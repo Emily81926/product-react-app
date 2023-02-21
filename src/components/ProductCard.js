@@ -1,4 +1,4 @@
-function ProductCard({ title, price, image }) {
+function ProductCard({ title, price, image, showModal }) {
   return (
     <div className="column is-4-desktop is-6-tablet">
       <div className="card">
@@ -14,9 +14,12 @@ function ProductCard({ title, price, image }) {
           </div>
         </div>
         <footer className="card-footer">
-          <a href="/" className="card-footer-item">
+          <button
+            className="button is-ghost card-footer-item"
+            onClick={showModal}
+            >
             detail
-          </a>
+          </button>
         </footer>
       </div>
     </div>
