@@ -1,4 +1,8 @@
-function ProductCard({ title, price, image, showModal }) {
+function ProductCard({ title, price, image, showModal, id, getId }) {
+  const handleClick = () => {
+    getId(id);
+    showModal();
+  };
   return (
     <div className="column is-4-desktop is-6-tablet">
       <div className="card">
@@ -16,8 +20,8 @@ function ProductCard({ title, price, image, showModal }) {
         <footer className="card-footer">
           <button
             className="button is-ghost card-footer-item"
-            onClick={showModal}
-            >
+            onClick={handleClick}
+          >
             detail
           </button>
         </footer>
