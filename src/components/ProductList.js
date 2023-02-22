@@ -1,44 +1,21 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import ProductCard from "./ProductCard";
 import ProductModal from "./ProductModal";
 import ProductsContext from "../context/products";
 
 function ProductList() {
-  const { products, fetchData } = useContext(ProductsContext);
+  const { products, fetchData, showModal, getId, handleClose } =
+    useContext(ProductsContext);
 
   useEffect(() => {
     fetchData();
   });
-  
-  //set initial modal not showing
-  const [showModal, setShowModal] = useState(false);
-  //set get the product ID when click the modal
-  const [getId, setGetId] = useState("");
-
-
-  const getClickedId = (id) => {
-    setGetId(id);
-  };
-
-  const handleClick = () => {
-    setShowModal(true);
-  };
-
-  const handleClose = () => [setShowModal(false), setGetId("")];
 
   const renderProducts = products.map((product) => {
     //send id, title, price, image as props to ProductCard
     const { id, title, price, image } = product;
     return (
-      <ProductCard
-        showModal={handleClick}
-        key={id}
-        title={title}
-        price={price}
-        image={image}
-        id={id}
-        getId={getClickedId}
-      />
+      <ProductCard key={id} title={title} price={price} image={image} id={id} />
     );
   });
 
