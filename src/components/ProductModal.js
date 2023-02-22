@@ -1,13 +1,15 @@
-function ProductModal({
-  closeModal,
-  title,
-  image,
-  price,
-  description,
-  category,
-  rate,
-  count,
-}) {
+import { useContext } from "react";
+import ProductsContext from "../context/products";
+
+function ProductModal() {
+
+  const { handleClose, products, getId } = useContext(ProductsContext);
+  const product = products.filter((product) => {
+    return product["id"] === getId;
+  });
+  const { title, image, price, description, category } = product[0];
+  const { rate, count } = product[0]["rating"];
+
   return (
     <div className="modal is-active">
       <div className="modal-background"></div>
@@ -15,7 +17,7 @@ function ProductModal({
         <header className="card-header">
           <p className="card-header-title">{title}</p>
           <button
-            onClick={closeModal}
+            onClick={handleClose}
             className="delete"
             aria-label="close"
           ></button>

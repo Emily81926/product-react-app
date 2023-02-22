@@ -4,8 +4,7 @@ import ProductModal from "./ProductModal";
 import ProductsContext from "../context/products";
 
 function ProductList() {
-  const { products, fetchData, showModal, getId, handleClose } =
-    useContext(ProductsContext);
+  const { products, fetchData, showModal, getId } = useContext(ProductsContext);
 
   useEffect(() => {
     fetchData();
@@ -25,18 +24,7 @@ function ProductList() {
         <div className="columns is-multiline is-vcentered">
           {renderProducts}
         </div>
-        {showModal && (
-          <ProductModal
-            closeModal={handleClose}
-            title={products[getId - 1]["title"]}
-            image={products[getId - 1]["image"]}
-            price={products[getId - 1]["price"]}
-            description={products[getId - 1]["description"]}
-            category={products[getId - 1]["category"]}
-            rate={products[getId - 1]["rating"]["rate"]}
-            count={products[getId - 1]["rating"]["count"]}
-          />
-        )}
+        {showModal && <ProductModal products={products} id={getId} />}
       </section>
     </div>
   );
