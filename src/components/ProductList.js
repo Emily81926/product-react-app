@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import ProductCard from "./ProductCard";
 import ProductModal from "./ProductModal";
+import ProductsContext from "../context/products";
 
-function ProductList({ products }) {
+function ProductList() {
+  const { products, fetchData } = useContext(ProductsContext);
+
+  useEffect(() => {
+    fetchData();
+  });
+  
   //set initial modal not showing
   const [showModal, setShowModal] = useState(false);
   //set get the product ID when click the modal
   const [getId, setGetId] = useState("");
+
 
   const getClickedId = (id) => {
     setGetId(id);

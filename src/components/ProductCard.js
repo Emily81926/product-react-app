@@ -1,4 +1,4 @@
-function ProductCard({ title, price, image, showModal, id, getId }) {
+function ProductCard({ title, price, image, showModal, id, getId, num }) {
   const handleClick = () => {
     getId(id);
     showModal();
@@ -13,7 +13,7 @@ function ProductCard({ title, price, image, showModal, id, getId }) {
         </div>
         <div className="card-content">
           <div className="media-content">
-            <p className="title is-6">{title}</p>
+            <p className="title is-6">{title}{num}</p>
             <p className="subtitle is-6 pt-2">${price}</p>
           </div>
         </div>
