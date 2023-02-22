@@ -27,6 +27,16 @@ function Provider({ children }) {
 
   const handleClose = () => [setShowModal(false), setGetId("")];
 
+  const getSingleProduct = (products, id) => {
+    const product = products.filter((product) => {
+      return product["id"] === id;
+    });
+    const { title, image, price, description, category } = product[0];
+    const { rate, count } = product[0]["rating"];
+
+    return { title, image, price, description, category, rate, count };
+  }
+
   const valueToShare = {
     products,
     showModal,
@@ -35,6 +45,7 @@ function Provider({ children }) {
     getClickedId,
     clickDetail,
     handleClose,
+    getSingleProduct,
   };
 
   return (

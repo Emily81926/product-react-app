@@ -2,13 +2,11 @@ import { useContext } from "react";
 import ProductsContext from "../context/products";
 
 function ProductModal() {
+  const { handleClose, products, getId, getSingleProduct } =
+    useContext(ProductsContext);
 
-  const { handleClose, products, getId } = useContext(ProductsContext);
-  const product = products.filter((product) => {
-    return product["id"] === getId;
-  });
-  const { title, image, price, description, category } = product[0];
-  const { rate, count } = product[0]["rating"];
+  const { title, image, price, description, category, rate, count } =
+    getSingleProduct(products, getId);
 
   return (
     <div className="modal is-active">
