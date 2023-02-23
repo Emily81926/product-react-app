@@ -11,7 +11,7 @@ function ProductModal() {
 
   return (
     <div className="modal is-active">
-      <div className="modal-background"></div>
+      <div className="modal-background" onClick={handleClose}></div>
       <div className="card column is-one-third">
         <header className="card-header">
           <p className="card-header-title">{title}</p>

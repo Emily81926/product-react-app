@@ -13,9 +13,7 @@ function ProductCard({ title, price, image, id }) {
         </div>
         <div className="card-content">
           <div className="media-content">
-            <p className="title is-6">
-              {title}
-            </p>
+            <p className="title is-6">{title}</p>
             <p className="subtitle is-6 pt-2">${price}</p>
           </div>
         </div>
