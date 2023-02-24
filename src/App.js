@@ -4,12 +4,9 @@ import Hero from "./components/Hero";
 import ErrorFallback from "./components/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
 import Spinner from "./components/Spinner";
+import LogError from "./hooks/log-error-function";
 
 const ProductList = lazy(() => import("./pages/ProductList"));
-
-const LogError = (error, errorInfo) => {
-  console.log("Logging Error:", error, "ErrorInfo:", errorInfo.componentStack);
-};
 
 function App() {
   return (
