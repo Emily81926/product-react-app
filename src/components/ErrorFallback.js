@@ -1,4 +1,4 @@
-import errorImage from "../image/errorImage.jpg";
+import errorImage from "../assets/errorImage.jpg";
 
 const ErrorFallback = () => {
   return (
