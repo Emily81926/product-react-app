@@ -1,8 +1,11 @@
 import "bulma/css/bulma.css";
-import ProductList from "./pages/ProductList";
+import { Suspense, lazy } from "react";
 import Hero from "./components/Hero";
 import ErrorFallback from "./components/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
+import Spinner from "./components/Spinner";
+
+const ProductList = lazy(() => import("./pages/ProductList"));
 
 const LogError = (error, errorInfo) => {
   console.log("Logging Error:", error, "ErrorInfo:", errorInfo.componentStack);
@@ -13,7 +16,9 @@ function App() {
     <div>
       <Hero />
       <ErrorBoundary FallbackComponent={ErrorFallback} onError={LogError}>
-        <ProductList />
+        <Suspense fallback={<Spinner />}>
+          <ProductList />
+        </Suspense>
       </ErrorBoundary>
     </div>
   );
