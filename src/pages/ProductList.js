@@ -1,6 +1,6 @@
 import { useEffect, useContext } from "react";
-import ProductCard from "./ProductCard";
-import ProductModal from "./ProductModal";
+import ProductCard from "../components/ProductCard";
+import ProductModal from "../components/ProductModal";
 import ProductsContext from "../context/products";
 
 function ProductList() {
