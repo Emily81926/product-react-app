@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import getProducts from "../apis/getProducts";
+import getProducts from "../adapters/getProducts";
 
 const ProductsContext = createContext();
 
