@@ -7,7 +7,7 @@ function ProductCard({ title, price, image, id }) {
     <div className="column is-4-desktop is-6-tablet">
       <div className="card">
         <div className="card-image px-6 p-3">
-          <figure className="image is-4by5">
+          <figure className="image is-4by3">
             <img src={image} alt={title} />
           </figure>
         </div>

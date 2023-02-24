@@ -21,8 +21,8 @@ function ProductModal() {
             aria-label="close"
           ></button>
         </header>
-        <div className="card-image px-6 p-3 column is-two-thirds container is-centered">
-          <figure className="image is-4by5">
+        <div className="card-image px-6 p-4 column is-two-thirds container is-centered">
+          <figure className="image is-4by3">
             <img src={image} alt="Placeholder" />
           </figure>
         </div>
