@@ -2,7 +2,7 @@ import { useContext } from "react";
 import ProductsContext from "../context/products";
 
 function ProductCard({ title, price, image, id }) {
-  const { clickDetail, getClickedId } = useContext(ProductsContext);
+  const { clickDetail, getProductId } = useContext(ProductsContext);
   return (
     <div className="column is-4-desktop is-6-tablet">
       <div className="card">
@@ -21,7 +21,7 @@ function ProductCard({ title, price, image, id }) {
           <button
             className="button is-ghost card-footer-item"
             onClick={() => {
-              getClickedId(id);
+              getProductId(id);
               clickDetail();
             }}
           >

@@ -3,20 +3,20 @@ import ProductsContext from "../context/products";
 import ReactStars from "react-rating-stars-component";
 
 function ProductModal() {
-  const { handleClose, products, getId, getSingleProduct } =
+  const { closeModal, products, getId, getModalInfo } =
     useContext(ProductsContext);
 
   const { title, image, price, description, category, rate, count } =
-    getSingleProduct(products, getId);
+    getModalInfo(products, getId);
 
   return (
     <div className="modal is-active">
-      <div className="modal-background" onClick={handleClose}></div>
+      <div className="modal-background" onClick={closeModal}></div>
       <div className="card column is-one-third">
         <header className="card-header">
           <p className="card-header-title">{title}</p>
           <button
-            onClick={handleClose}
+            onClick={closeModal}
             className="delete"
             aria-label="close"
           ></button>
