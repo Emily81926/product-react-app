@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import ProductsContext from "../context/products";
+import useProductsContext from "../hooks/use-products-context";
 
 function ProductCard({ title, price, image, id }) {
-  const { clickDetail, getProductId } = useContext(ProductsContext);
+  const { clickDetail, getProductId } = useProductsContext();
   return (
     <div className="column is-4-desktop is-6-tablet">
       <div className="card">

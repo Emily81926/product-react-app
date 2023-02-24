@@ -1,11 +1,11 @@
-import { useEffect, useContext } from "react";
+import { useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
-import ProductsContext from "../context/products";
+import useProductsContext from "../hooks/use-products-context";
 
 function ProductList() {
-  const { products, fetchData, showModal, getId } = useContext(ProductsContext);
-
+  const { products, fetchData, showModal, getId } = useProductsContext();
+  
   useEffect(() => {
     fetchData();
   });

@@ -1,11 +1,8 @@
-import { useContext } from "react";
-import ProductsContext from "../context/products";
 import ReactStars from "react-rating-stars-component";
+import useProductsContext from "../hooks/use-products-context";
 
 function ProductModal() {
-  const { closeModal, products, getId, getModalInfo } =
-    useContext(ProductsContext);
-
+  const { closeModal, products, getId, getModalInfo } = useProductsContext();
   const { title, image, price, description, category, rate, count } =
     getModalInfo(products, getId);
 
