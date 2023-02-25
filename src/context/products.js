@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useCallback } from "react";
 import getProducts from "../adapters/getProducts";
 
 const ProductsContext = createContext();
@@ -12,10 +12,10 @@ function Provider({ children }) {
   const [getId, setGetId] = useState("");
 
   //1. get product information context
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     const response = await getProducts();
     setProducts(response);
-  };
+  },[])
 
   //2.show detail modal context
   const getProductId = (id) => {

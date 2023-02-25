@@ -5,10 +5,10 @@ import useProductsContext from "../hooks/use-products-context";
 
 function ProductList() {
   const { products, fetchData, showModal, getId } = useProductsContext();
-  
+
   useEffect(() => {
     fetchData();
-  });
+  }, [fetchData]);
 
   const renderProducts = products.map((product) => {
     //send id, title, price, image as props to ProductCard
