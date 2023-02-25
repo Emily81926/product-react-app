@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import ProductsContext from "../context/products";
+import { useContext } from 'react'
+import ProductsContext from '../context/products'
 
-function useProductsContext(){
+function useProductsContext() {
   return useContext(ProductsContext)
 }
 
-export default useProductsContext;
+export default useProductsContext

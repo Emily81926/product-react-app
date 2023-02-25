@@ -1,10 +1,9 @@
-import ReactStars from "react-rating-stars-component";
-import useProductsContext from "../hooks/use-products-context";
+import ReactStars from 'react-rating-stars-component'
+import useProductsContext from '../hooks/use-products-context'
 
 function ProductModal() {
-  const { closeModal, products, getId, getModalInfo } = useProductsContext();
-  const { title, image, price, description, category, rate, count } =
-    getModalInfo(products, getId);
+  const { closeModal, products, getId, getModalInfo } = useProductsContext()
+  const { title, image, price, description, category, rate, count } = getModalInfo(products, getId)
 
   return (
     <div className="modal is-active">
@@ -12,11 +11,7 @@ function ProductModal() {
       <div className="card column is-one-third">
         <header className="card-header">
           <p className="card-header-title">{title}</p>
-          <button
-            onClick={closeModal}
-            className="delete"
-            aria-label="close"
-          ></button>
+          <button onClick={closeModal} className="delete" aria-label="close"></button>
         </header>
         <div className="card-image px-6 p-4 column is-two-thirds container is-centered">
           <figure className="image is-4by3">
@@ -26,18 +21,10 @@ function ProductModal() {
         <div className="card-content">
           <div className="media-content">
             <div>
-              <p className="category is-size-7 has-text-weight-bold">
-                {category}
-              </p>
+              <p className="category is-size-7 has-text-weight-bold">{category}</p>
               <div className="ratings is-flex pt-2">
                 <div className="rating-star is-flex-direction-column">
-                  <ReactStars
-                    size={15}
-                    count={5}
-                    value={rate}
-                    edit={false}
-                    isHalf={true}
-                  />
+                  <ReactStars size={15} count={5} value={rate} edit={false} isHalf={true} />
                 </div>
                 <div className="rating-number is-flex-direction-column has-text-left ml-1 is-size-6">
                   {rate}
@@ -55,7 +42,7 @@ function ProductModal() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ProductModal;
+export default ProductModal

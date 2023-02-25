@@ -1,4 +1,4 @@
-import errorImage from "../assets/errorImage.jpg";
+import errorImage from '../assets/errorImage.jpg'
 
 const ErrorFallback = () => {
   return (
@@ -12,11 +12,11 @@ const ErrorFallback = () => {
         This Page Could Not Get Product Information
       </h2>
       <p className="is-uppercase pt-3">
-        Sorry but the page you are looking for does not exist, have been
-        removed. Name changed or is temporarily unavailable
+        Sorry but the page you are looking for does not exist, have been removed. Name changed or is
+        temporarily unavailable
       </p>
     </div>
-  );
-};
+  )
+}
 
-export default ErrorFallback;
+export default ErrorFallback

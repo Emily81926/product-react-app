@@ -1,7 +1,7 @@
-import useProductsContext from "../hooks/use-products-context";
+import useProductsContext from '../hooks/use-products-context'
 
 function ProductCard({ title, price, image, id }) {
-  const { clickDetail, getProductId } = useProductsContext();
+  const { clickDetail, getProductId } = useProductsContext()
   return (
     <div className="column is-4-desktop is-6-tablet">
       <div className="card">
@@ -20,16 +20,15 @@ function ProductCard({ title, price, image, id }) {
           <button
             className="button is-ghost card-footer-item"
             onClick={() => {
-              getProductId(id);
-              clickDetail();
-            }}
-          >
+              getProductId(id)
+              clickDetail()
+            }}>
             detail
           </button>
         </footer>
       </div>
     </div>
-  );
+  )
 }
 
-export default ProductCard;
+export default ProductCard
