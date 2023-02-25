@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Immersive Shopping App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project shows the product list and detail information to the clients, built with React, Javascript, and Bulma CSS framework.
 
-## Available Scripts
+## Project Screen Shots
 
-In the project directory, you can run:
+#### Product List
 
-### `npm start`
+![image](https://github.com/Emily81926/product-react-app/blob/ebc749a2cdc3fceb2d492791344675643f5c68e7/src/assets/productList.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Detail Modal
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/Emily81926/product-react-app/blob/ebc749a2cdc3fceb2d492791344675643f5c68e7/src/assets/detailModal.png)
 
-### `npm test`
+#### Error Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/Emily81926/product-react-app/blob/ebc749a2cdc3fceb2d492791344675643f5c68e7/src/assets/errorPage.png)
 
-### `npm run build`
+## Features
+- Users can see basic product information on Product List, such as title, image and price
+- Users click the detail button, will see the detail information, such as category, rating, count and description
+- While page loading, will show the loading spinner
+- Error page will show, when page cannot get product data from API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup Instructions
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Installation
+1. Download project to local
+```
+git clone https://github.com/Emily81926/product-react-app.git
+```
+2. Enter project folder
+```
+cd product-react-app
+```
+3. Install package
+```
+npm install
+```
+4. Add `.env.local` file in root directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Add API url to `.env.local` (See `.env.example`)
+```
+REACT_APP_PRODUCT_API= `put in your own product API`
+```
 
-### `npm run eject`
+#### Develop
+```
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Build
+```
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `axios`  1.3.3 
+- `bulma` 0.9.4
+- `env-cmd` 10.1.0
+- `react` 18.2.0
+- `react-dom` 18.2.0
+- `react-error-boundary` 3.1.4
+- `react-spinners` 0.13.8
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
