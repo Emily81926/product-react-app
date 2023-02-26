@@ -12,13 +12,11 @@ function App() {
   return (
     <div>
       <Hero />
-      <Suspense fallback={<Spinner />}>
-        <ErrorBoundary FallbackComponent={ErrorFallback} onError={LogError}>
-          <Suspense fallback={<Spinner />}>
-            <ProductList />
-          </Suspense>
-        </ErrorBoundary>
-      </Suspense>
+      <ErrorBoundary FallbackComponent={ErrorFallback} onError={LogError}>
+        <Suspense fallback={<Spinner />}>
+          <ProductList />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   )
 }
