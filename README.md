@@ -65,3 +65,34 @@ npm run build
 - `react-error-boundary` 3.1.4
 - `react-spinners` 0.13.8
 
+## Reflections
+
+#### What I have learned
+
+ `Framework of Reactjs project`
+
+organize the codes in folders, such as components , pages, context, hooks, assets and so on
+
+`Reactjs function component and hooks`
+
+create function component, apply `useState` and pass the props to manipulate the value, use `useEffect` to make the request right after the component renders, and apply `useContext` to pass the value and method without passing through several component layers
+
+`Bulma CSS framework`
+
+use Bulma framework to style the app, and apply some libraries to accelerate the development , such as Card and Modal component, Hero layer, column styles, and so on
+
+`ErrorHandling`
+
+to prevent the page from crashing due to the server error, I use react-error-boundary to log the error, and add ErrorFallback page when page cannot render the ProductList page
+
+`React-spinner, React-rating-stars component`
+
+use react-spinners and react-rating-stars to build the special styles of these elements
+
+`Suspense and Lazy`
+
+to fill the blank page when component is still rendering, add suspense and lazy method to show the spinner during the suspense time
+
+`Coding style custom setting`
+
+Not only use Prettier and Eslint extensions in vscode, also add prettierrc.json to customize the coding style, such as don’t use the semi colon, use the single quote, make jsx bracket at the same line, and so on
